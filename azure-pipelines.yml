@@ -1,8 +1,4 @@
 # Python package
-- task: BBMain@0
-  inputs:
-    connectedServiceName: 'BB'
-
 # Create and test a Python package on multiple Python versions.
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
@@ -23,6 +19,10 @@ steps:
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
+- task: BBMain@0
+  inputs:
+    connectedServiceName: 'BB'
+
 
 - task: BBMain@0
   inputs:
