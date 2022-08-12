@@ -23,11 +23,6 @@ steps:
   inputs:
     connectedServiceName: 'BB'
 
-
-- task: BBMain@0
-  inputs:
-    connectedServiceName: 'BB'
-    
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
